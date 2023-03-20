@@ -1,0 +1,47 @@
+@use '_reset';
+
+$themecolor-1: #130C12;
+$themecolor-2: #F8F1EF;
+$themecolor-3: #CB907C;
+$themecolor-4: #9A564C;
+$themecolor-5: #6B2B17;
+$themecolor-6: #260B0B;
+$themecolor-7: #C1A480;
+$themecolor-8: #743a36;
+
+/*-----------------------------Loader-----------------------------*/
+body{
+    
+    .loader-container{
+        position: fixed;
+        top: 0; 
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        background: $themecolor-6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    
+        img{
+            width: 50%;
+        }
+    
+        .fade-out{
+            top: 110%;
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (min-width:844px) {
+    body{
+        .loader-container{
+            img{
+                width: 15%;
+            }
+        }
+    }
+}

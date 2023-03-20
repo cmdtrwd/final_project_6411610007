@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #260B0B;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 54px;
+  transition: 0.5s ease-in-out all;
+  overflow: hidden;
+  position: absolute;
+}
+nav.active {
+  background-color: #C5A364;
+}
+nav.active {
+  height: 100vh;
+  z-index: 1;
+}
+nav #menu-icon2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 35px;
+  cursor: pointer;
+  color: #FAF8EC;
+}
+nav #menu-icon2 .fa-bars {
+  display: block;
+  font-size: 22px;
+  color: #FAF8EC;
+}
+nav #menu-icon2 .fa-xmark {
+  display: none;
+  font-size: 22px;
+  color: black;
+}
+nav #menu-icon2.active .fa-bars {
+  display: none;
+}
+nav #menu-icon2.active .fa-xmark {
+  display: block;
+}
+nav #menu2 {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  transform: translateX(-300px);
+  transition: 0.3s ease-in all;
+}
+nav #menu2 a {
+  text-decoration: none;
+  color: black;
+}
+nav #menu2 a li {
+  padding: 8px 32px;
+  width: 150px;
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+  text-decoration: none;
+}
+nav #menu2 a li:hover {
+  background-color: #DBC8A7;
+}
+nav #menu2.active {
+  transform: translateX(0px);
+  background-color: #C5A364;
+}
+nav .logo-container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-left: 160px;
+  margin-top: 25px;
+}
+nav .logo-container .logo img {
+  z-index: 1;
+  width: 75px;
+  margin-top: 50px;
+}
+
+/*-----------------------------Shopping--------------------------*/
+.shopping {
+  background-color: #260B0B;
+}
+.shopping .sub-heading {
+  text-align: center;
+  justify-content: center;
+  color: #F8F1EF;
+  font-size: 24px;
+  padding-top: 50px;
+}
+.shopping .heading {
+  text-align: center;
+  justify-content: center;
+  color: #C1A480;
+  font-size: 32px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  padding-top: 25px;
+}
+.shopping .box-container {
+  width: 80%;
+  margin: 64px auto;
+}
+.shopping .box-container .box, .shopping .box-container .box3 {
+  margin: 0 0 64px 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 20px;
+  border: 0.1rem solid white;
+  box-shadow: var(--box-shadow);
+}
+.shopping .box-container .box .dot, .shopping .box-container .box3 .dot {
+  position: absolute;
+  margin: -8px 0 0 0;
+  height: 70px;
+  width: 70px;
+  background-color: #6B2B17;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+.shopping .box-container .box .dot .save, .shopping .box-container .box3 .dot .save {
+  font-size: 14px;
+  margin: 13px 0 0 0;
+  text-align: center;
+  justify-content: center;
+  color: #F8F1EF;
+  padding-top: 3px;
+  padding-bottom: 2px;
+}
+.shopping .box-container .box .dot .percent, .shopping .box-container .box3 .dot .percent {
+  font-size: 22px;
+  text-align: center;
+  justify-content: center;
+  color: #C1A480;
+  margin-left: 5px;
+}
+.shopping .box-container .box .flag, .shopping .box-container .box3 .flag {
+  display: flex;
+}
+.shopping .box-container .box .flag img, .shopping .box-container .box3 .flag img {
+  margin: 8px 8px 0 0;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+}
+.shopping .box-container .box .flag h5, .shopping .box-container .box3 .flag h5 {
+  font-weight: 100;
+  margin: 11px 0 0 0;
+}
+.shopping .box-container .box .price, .shopping .box-container .box3 .price {
+  display: flex;
+}
+.shopping .box-container .box .price img, .shopping .box-container .box3 .price img {
+  margin: -90px 0 0 -50px;
+  width: 80%;
+  height: auto;
+}
+.shopping .box-container .box .price .stars, .shopping .box-container .box3 .price .stars {
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 0 -25px;
+}
+.shopping .box-container .box .price .stars h1, .shopping .box-container .box3 .price .stars h1 {
+  font-weight: 800;
+  font-size: 48px;
+  margin-top: 20px;
+  color: #6B2B17;
+}
+.shopping .box-container .box .price .stars .fas, .shopping .box-container .box3 .price .stars .fas {
+  color: #6B2B17;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.shopping .box-container .box .price .stars h2, .shopping .box-container .box3 .price .stars h2 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #6B2B17;
+}
+.shopping .box-container .box .price .stars button, .shopping .box-container .box3 .price .stars button {
+  color: white;
+  font-size: 20px;
+  background-color: #6B2B17;
+  padding: 8px 36px;
+  margin: 16px 0 0 0;
+  border-radius: 24px;
+  font-weight: 500;
+}
+.shopping .box-container .box .price .stars h5, .shopping .box-container .box3 .price .stars h5 {
+  margin: 8px 0;
+  text-decoration: line-through;
+  font-size: 16px;
+}
+.shopping .box-container h3 {
+  margin: 8px 0;
+  font-weight: 100;
+  font-size: 18px;
+  color: #6B2B17;
+}
+.shopping .box-container h4 {
+  color: #6B2B17;
+  font-size: 20px;
+}
+.shopping .box-container .flag img {
+  font-size: 16px;
+}
+.shopping .box-container .flag h5 {
+  font-size: 16px;
+}
+/*-----------------------------Footer-----------------------------*/
+.footer {
+  font-family: "urbanist";
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #130C12;
+}
+.footer .footer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-container .about {
+  width: 100%;
+}
+.footer .footer-container .about h4 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #C1A480;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.footer .footer-container .content {
+  text-align: center;
+  justify-content: center;
+}
+.footer .footer-container .content p {
+  color: #FAF8EC;
+  margin-bottom: 30px;
+  font-size: 14px;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 25px;
+}
+.footer .footer-container .content .icons {
+  margin-bottom: 20px;
+}
+.footer .footer-container .content .icons .fa {
+  color: #FAF8EC;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.footer .footer-container .content .icons .fa .fa-heart-o {
+  color: #FAF8EC;
+}
+
+@media screen and (min-width: 844px) {
+  nav {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+  }
+  nav #menu-icon2 {
+    display: none;
+  }
+  nav #menu2 {
+    transform: translateX(0px);
+    flex-direction: row;
+    justify-content: right;
+    padding: 32px 64px;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  nav #menu2 a {
+    text-decoration: none;
+    color: #FAF8EC;
+  }
+  nav #menu2 a li {
+    text-align: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    width: 150px;
+  }
+  nav #menu2 a li:hover {
+    background-color: transparent;
+    color: #C5A364;
+    font-weight: 600;
+  }
+  nav .logo-container {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 25px;
+  }
+  nav .logo-container .logo {
+    z-index: 1;
+    width: 120px;
+    margin-top: 10px;
+  }
+  body {
+    font-family: "urbanist";
+  }
+  body .shopping .heading {
+    margin-bottom: 50px;
+  }
+  body .shopping .box-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+  body .shopping .box-container .box, body .shopping .box-container .box3 {
+    margin: 0 64px 64px 0;
+    transition: 0.5s;
+  }
+  body .shopping .box-container .box .dot, body .shopping .box-container .box3 .dot {
+    z-index: 24;
+  }
+  body .shopping .box-container .box img, body .shopping .box-container .box3 img {
+    transition: 0.3s;
+    transform: translateY(0);
+  }
+  body .shopping .box-container .box img:hover, body .shopping .box-container .box3 img:hover {
+    transform: translateY(-30px);
+  }
+  body .shopping .box-container .box:hover, body .shopping .box-container .box3:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.283);
+  }
+  body .shopping .box-container .box3 {
+    margin: 0 0 64px 0;
+  }
+  body .footer .footer-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body .footer .footer-container .about {
+    width: 15%;
+    margin: auto 0;
+  }
+  body .footer .footer-container .content {
+    text-align: left;
+  }
+  body .footer .footer-container .content .icons {
+    margin-left: -8px;
+  }
+  body .footer .footer-container .content .icons .fa {
+    padding: 10px 0;
+  }
+}
+.slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1em;
+  width: 100%;
+  height: 500px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
+}
+.slider .fa-solid {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  opacity: 0.75;
+  transition: opacity 100ms ease-in-out;
+  z-index: 100;
+}
+.slider .fa-solid:hover {
+  opacity: 1;
+}
+.slider .fa-solid .img-container {
+  display: flex;
+  transition: transform 300ms ease-in-out;
+}
+.slider .logo-container {
+  margin-left: 25px;
+  margin-top: 8px;
+}
+.slider .logo {
+  z-index: 1;
+  width: 60px;
+  margin-top: 20px;
+}
+
+.previous {
+  left: 4.5rem;
+}
+
+.next {
+  right: 4.5rem;
+}/*# sourceMappingURL=about.css.map */
