@@ -11,46 +11,46 @@ $(document).ready(function(){
 
 
 
-const next = document.querySelector(".next");
-const prev = document.querySelector(".previous");
+// const next = document.querySelector(".next");
+// const prev = document.querySelector(".previous");
 
-const numImg = document.querySelectorAll("img").length;
-let currImg = 1;
+// const numImg = document.querySelectorAll("img").length;
+// let currImg = 1;
 
-let timeoutID;
+// let timeoutID;
 
-next.addEventListener("click", () => {
-  currImg++;
-  clearTimeout(timeoutID);
-  updateImage();
-});
+// next.addEventListener("click", () => {
+//   currImg++;
+//   clearTimeout(timeoutID);
+//   updateImage();
+// });
 
-prev.addEventListener("click", () => {
-  currImg--;
-  clearTimeout(timeoutID);
+// prev.addEventListener("click", () => {
+//   currImg--;
+//   clearTimeout(timeoutID);
 
-  updateImage();
-});
+//   updateImage();
+// });
 
 
 
-const imgcontainer = document.querySelector(".img-container");
+// const imgcontainer = document.querySelector(".img-container");
 
-function updateImage() {
-  if (currImg > numImg) {
-    currImg = 1;
-  } else if (currImg < 1) {
-    currImg = numImg;
-  }
-  imgcontainer.style.transform = `translateX(-${(currImg - 1) * 800}px)`;
+// function updateImage() {
+//   if (currImg > numImg) {
+//     currImg = 1;
+//   } else if (currImg < 1) {
+//     currImg = numImg;
+//   }
+//   imgcontainer.style.transform = `translateX(-${(currImg - 1) * 800}px)`;
 
-  timeoutID = setTimeout(() => {
-    currImg++;
-    updateImage();
-  }, 2000);
-}
+//   timeoutID = setTimeout(() => {
+//     currImg++;
+//     updateImage();
+//   }, 2000);
+// }
 
-updateImage();
+// updateImage();
 
 
 
